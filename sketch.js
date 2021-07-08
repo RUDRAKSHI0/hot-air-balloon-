@@ -29,23 +29,28 @@ function draw() {
   background(bg);
  
   if(keyDown(LEFT_ARROW)){
+    writeHeight(0,-10)
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    //write code to move air balloon in left direction
-  
+   
+    balloon.scale=balloon.scale-0.01;
   }
   else if(keyDown(RIGHT_ARROW)){
+    writeHeight(0,-10)
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    //write code to move air balloon in right direction
 
+    balloon.scale=balloon.scale-0.01;
   }
   else if(keyDown(UP_ARROW)){
+    writeHeight(0,-10)
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    //write code to move air balloon in up direction
    
+    balloon.scale=balloon.scale-0.01;
   }
   else if(keyDown(DOWN_ARROW)){
+    writeHeight(0,-10)
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    //write code to move air balloon in down direction
+   
+    balloon.scale=balloon.scale-0.01;
  
   }
   
@@ -74,8 +79,8 @@ function draw() {
 //}
 function writeHeight(x,y){
   database.ref('balloon/position').set({
-      'x': position.x + x ,
-      'y': position.y + y
+      'x': height.x + x ,
+      'y':height.y + y
     })
   }
 function readHeight(data){
